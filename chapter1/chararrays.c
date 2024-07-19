@@ -5,7 +5,7 @@ int main(){
     char x[10];
     int i;
 
-    for(i=0; i<1000; i++) x[i] = '*'; //here 1000 chars are beyond alocated 10.
+    for(i=0; i<10; i++) x[i] = '*'; //here 1000 chars are beyond alocated 10.
     printf("%s\n",x);
 }
 

@@ -1,32 +1,33 @@
 #include <stdio.h>
 
+int py_len(self)
+    char self[];
+{
+    int i;
+    for(i=0; self[i]; i++);
+    return i;
+}
+void reverse(char *word)
+{
+    int py_len();
+    int length = py_len(word);
+    int new, i;
+    //Divided by 2 to determine middle - because that is
+    //where loop should stop.
+    for(i=0; i<length/2; i++){
+    new = word[i];
+    word[i] = word[length - i - 1];
+    word[length - i - 1] = new;
+    }
+}
 int main(void)
 {   
-    char word[] = "word";
+    char word[20];
     //scanf("%s\n");
-    //fgets(word,20,stdin);
-    word[0]
-    printf("%s\n", word);
-    return 0;
+    fgets(word,20,stdin);
+
+    reverse(word);
+   
+printf("%s\n", word);
 }
-
-
-//Reverse a String:
-
-/*
-In simple words. 
-A string has 'n' amount of letters.
-I need each individual letter from 
-the end of the word.
-I could get that with modulus.
-I will than store those letters in a new array 
-of characters.
-!Length is no longer a word and does not
-store any characters.
-
-
-
-
-*/
-
 
